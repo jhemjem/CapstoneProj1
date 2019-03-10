@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pizza</title>
+</head>
+
+<style>
+	*{
+		font-size: 18px;
+	}
+	.txt{
+		padding-left: 10px;
+	}
+	
+	fieldset{
+		width: 22%;
+		height: 180px;
+		float: left;
+	}
+	p{
+		font-size: 30px;
+	}
+
+	.t1{
+		float: left;
+		width: 50%;
+	}
+	.t2{
+		float: left;
+		width: 50%;
+	}
+</style>
+
+<body>
+	<form action="order2nd.php" method=POST>
+		<label>Customer Name:</label><br>
+			<input type="text" name=customer required class=txt><br>
+		<label>Address:</label><br>
+			<input type="text" name=address required class=txt><br>
+
+		<fieldset class=f1>
+			<legend>
+				<p>Pizza Size</p>
+			</legend>
+			
+			<input type="radio" name=size value=Solo checked>Solo<br>
+			<input type="radio" name=size value=Double>Double<br>
+			<input type="radio" name=size value=Family>Family<br>
+		</fieldset>
+
+		<fieldset class=f2>
+			<legend>
+				<p>Crust Type</p>
+			</legend>
+
+			<input type="radio" name=crusttype value="Thin" checked>Thin<br>
+			<input type="radio" name=crusttype value="Thick">Thick<br>
+		</fieldset>
+
+		<fieldset class=f3>
+			<legend>
+				<p>Pizza Toppings</p>
+			</legend>
+			
+			<div class=toppings>
+				<div class=t1>
+					<input type=checkbox name=toppings[] value=Ham>Ham<br>
+					<input type=checkbox name=toppings[] value=Pepperoni>Pepperoni<br>
+					<input type=checkbox name=toppings[] value=Pineapple>Pineapple<br>
+					<input type=checkbox name=toppings[] value=Sausage>Sausage<br>
+				</div>
+
+				<div class=t2>
+					<input type=checkbox name=toppings[] value=Mushroom>Mushroom<br>
+					<input type=checkbox name=toppings[] value=Extra-Cheese>Extra-Cheese<br>
+					<input type=checkbox name=toppings[] value='Angus Beef'>Angus Beef<br>
+					<input type=checkbox name=toppings[] value=Bacon>Bacon
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset class=f4>
+			<legend>
+				<p>Order Type</p>
+			</legend>
+
+			<input type="radio" name=ordertype value="Dine-In" checked>Dine-In<br>
+			<input type="radio" name=ordertype value="Take-Away">Take-Away<br>
+		</fieldset>
+
+		<input type="submit" name=submit value='Submit Order'>
+	</form>
+</body>
+</html>
